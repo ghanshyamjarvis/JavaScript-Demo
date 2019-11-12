@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div onmousedown="f1(this)" onmouseup="f2(this)"> Click me</div>
+
+<script>
+  function f1(b)
+  {
+  b.style.background ="red";
+  b.innerHTML="Right Button Click"
+  }
+
+  function f2(b)
+  {
+  b.style.background="blue"
+    b.innerHTML="Leave the Button"
+  }
+
+</script>
+</body>
+</html>
