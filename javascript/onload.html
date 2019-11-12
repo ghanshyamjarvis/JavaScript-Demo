@@ -7,8 +7,16 @@
 <body onload="checkCookies()">
 
 <p id="demo"></p>
-<script>
 
+<p id="first"> </p>
+Name: <input type="text" id="name" onchange="ff()">
+
+
+<script>
+function ff() {
+  var x = document.getElementById("name");
+  x.value = x.value.toUpperCase();
+}
 
   var text ="";
 if (navigator.cookieEnabled == true)
