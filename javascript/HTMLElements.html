@@ -5,23 +5,59 @@
   <title>Title</title>
 
   <p class="intro"> This IS Class Element </p>
+
+
   <p class="intro"> This IS Class Element With Query Selector </p>
   <p id="ff"></p>
 
 
   <div id="main">
     <p id="first">Hello Good Morning</p>
+
     <p id="second">GOOD DAY</p>
   </div>
   <p id=""demo></p>
 
 
+<h1 id="a">Heading</h1>
+  <button onclick="document.getElementById("a).style.color='red'">Click</button>
+  <p id="d"></p>
+<h1 id="Good">Good</h1>
 
+  <form id="fm1" >
+  User Name : <input type="text" value="Donal"> <br>
+  Password : <input type="text" value="password"> <br>
+              <input type="Submit" value="submit"><br>
+   <button onclick="fn1()"> Try IT </button>
+</form>
 
 
 </head>
 <body>
 <script>
+
+
+
+
+  document.getElementById("first").style.color="Blue";
+  var ele =document.getElementById("Good");
+  ele.innerHTML="NEW ";
+
+
+  function fn1() {
+    var x=document.forms["fm1"];
+    var txt ="";
+    var i;
+
+    for(i=0; i < x.length; i++)
+    {
+      txt += x.elements[i].value +"<br>";
+    }
+    document.getElementById("d").innerHTML="txt";
+  }
+
+
+
 /*
   var z = document.getElementById("main");
   var y = z.document.getElementsByTagName("p");
@@ -32,9 +68,12 @@ var s = document.getElementsByClassName("intro");
 
 document.getElementById("ff").innerHTML= "Ohh Good " + " " + s[0].innerHTML;
 */
+/*
+
 var q = document.querySelectorAll("p.intro");
 
 document.getElementById("ff").innerHTML= "this is" + " "+ q[0].innerHTML;
+*/
 
 
 

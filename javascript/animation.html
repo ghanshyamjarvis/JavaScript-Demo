@@ -19,14 +19,44 @@
   background: beige;
 }
 </style>
-
+<h1 onclick = "this.innerHTML='ppp'"> last</h1>
 
 </head>
 <body>
-<div id="container">
-<div id="Animation">
 
+<p><button onclick="move()"> Click </button> </p>
+
+<div id="container">
+    <div id="Animation"></div>
 </div>
+<script>
+
+function move()
+{
+  var ele = document.getElementById("Animation");
+  var pos=0;
+  var id =setInterval(frames,5);
+
+  function frame()
+{
+if (pos==350)
+    {
+    clearInterval(id);
+    }
+else
+  {
+  pos++;
+  ele.style.top = pos +"px";
+  ele.style.left = pos +"px";
+  }
+
+}
+
+}
+
+
+
+</script>
 
 
 
