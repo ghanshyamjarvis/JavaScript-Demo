@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<p id="f"></p>
+<button onclick="fn1()"> For Sort </button>
+<button onclick="displaycars();"> just  </button>
+
+
+<input id="g" value="18"/>
+
+<p id="demo">good</p>
+
+<button onclick="cond()"> YES </button>
+
+
+</body>
+<script>
+/*
+  var number = [1,5,8,76,41,57,21,36,5,2,4];
+
+  document.getElementById("f").innerHTML=number;
+
+  function fn1() {
+    number.sort();
+    document.getElementById("f").innerHTML=number;
+
+  }
+
+
+
+  function fn2() {
+      number.sort(function (a,b) {
+        return a-b;
+  });
+      document.getElementById("f").innerHTML=number
+
+  }
+*/
+
+/*
+var cars = [{type:"Volvo", Year:"2016"},
+            {type:"SAAB", Year:"2001"},
+            {type:"BMW", Year:"2010"}];
+
+displaycars();
+
+function fn1() {
+  cars.sort(function (a, b) { return a.type - b.type});
+  displaycars();
+}
+
+  function displaycars() {
+    document.getElementById("f").innerHTML =
+      cars[0].type + " " + cars[0].Year + "<br>" +
+      cars[1].type + " " + cars[1].Year + "<br>" +
+      cars[2].type + " " + cars[2].Year;}
+*/
+
+/*
+var test;
+var points =[10,20,30,40,50];
+points.forEach(last);
+document.getElementById("f").innerHTML=test;
+
+function last(value) {
+test = test + value;
+}
+
+ */
+/*
+var b =new Date();
+document.getElementById("f").innerHTML=b.getFullYear()
+*/
+
+/*
+function name()
+  {
+  var age,vote;
+  age = document.getElementById("g").value;
+  vote = (age < 18) ? "No cannot vote" : "Yes Can Vote";
+  document.getElementById("s").innerHTML=vote;
+  }
+
+  var a,b;
+
+  a=10;
+  b=12;
+
+  if (a<b)
+  {
+    document.getElementById("s").innerHTML="true";
+    }
+
+
+if (new Date().getHours() < 22){
+  document.getElementById("demo").innerHTML= "YES";
+}
+*/
+
+function cond()
+{
+  let a = new Date().getHours();
+  let Display;
+
+  if (a < 18 ) {
+    Display = "Good DAy";
+  }else {
+    Display ="Evening";
+  }
+document.getElementById("demo").innerHTML=Display;
+
+
+}
+
+document.getElementById("f").innerHTML=new Date().getDay()
+
+</script>
+</html>

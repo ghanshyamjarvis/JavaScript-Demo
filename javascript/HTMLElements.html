@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+
+  <p class="intro"> This IS Class Element </p>
+  <p class="intro"> This IS Class Element With Query Selector </p>
+  <p id="ff"></p>
+
+
+  <div id="main">
+    <p id="first">Hello Good Morning</p>
+    <p id="second">GOOD DAY</p>
+  </div>
+  <p id=""demo></p>
+
+
+
+
+
+
+</head>
+<body>
+<script>
+/*
+  var z = document.getElementById("main");
+  var y = z.document.getElementsByTagName("p");
+
+  document.getElementById("demo").innerHTML= "first text"+" "+ y[0].innerHTML;
+
+var s = document.getElementsByClassName("intro");
+
+document.getElementById("ff").innerHTML= "Ohh Good " + " " + s[0].innerHTML;
+*/
+var q = document.querySelectorAll("p.intro");
+
+document.getElementById("ff").innerHTML= "this is" + " "+ q[0].innerHTML;
+
+
+
+
+</script>
+</body>
+</html>

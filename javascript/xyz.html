@@ -2,9 +2,844 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <title>Title</title>
+
+
 </head>
 <body>
-$END$
+<button onclick="document.getElementById('demo').innerHTML=Date()">The time is?</button>
+
+<input id="one" type="text">
+<button onclick="myfunction()">TEST</button>
+
+<p id="lll"> </p>
+
+<h2 id ="ram"></h2>
+<h1 id="gs"></h1>
+<p id ="a"></p>
+<p id ="b"></p>
+<p id="replace">Please visit Microsoft!</p>
+<button onclick="replicate()"> replicate </button>
+<p id="demo">Please visit Microsoft!</p>
+<p id="sd"></p>
+<button onclick="this.style.display='none'"> remove me </button>
+<button onclick="fd()"> Replace </button>
+<button onclick="fnn()    "> DO</button>
+<button onclick="remove()"> TRY</button>
+<button onclick="add()"> unshift</button>
+<button onclick="shorting()">shorting</button>
+
+<button id="btn">SUBMIT</button>
+<p id="me"> </p>
+<p id="press"></p>
+<input id="ide" type="text">
+<button onclick="fn()">click it</button>
+<p id="ooo"></p>
+<p id="ttt"></p>
+
+<p id ="d"></p>
+
+<p id="f"></p>
+
+<p id="hhh"></p>
+
+<h2>Create Object from JSON String</h2>
+<p id="JSON"></p>
+<p id="h"> </p>
+<button onclick="pushingele()">ADD THINGS </button>
+
+
+
+
+
+
+
+
+
+
+
+<p id="shorting"> Number</p>
+
+<script>
+
+
+
+var number = ["10,30,50,84,10,24,74,24,45"];
+document.getElementById(shorting).innerHTML=number;
+
+/*
+//forEach Looping
+var fruits,text;
+fruits = ["Apple","Banana","Chiku","Mangoes"];
+text =  "<ul>";
+fruits.forEach(first);
+text += "</ul>";
+
+document.getElementById("h").innerHTML =text;
+
+function first(value)
+{
+  text += "<li>" + value + "</li>"
+}
+
+*/
+/*
+fruits = ["Banana","Chiku","Mangoes","Apple"];
+document.getElementById("h").innerHTML=fruits;
+fruits.sort();
+document.getElementById(h).innerHTML=fruits;
+
+
+
+
+function pushingele() {
+    fruits.push("Grapes");
+    document.getElementById("h").innerHTML=fruits;
+}
+
+
+
+
+var cars = ["Maruti","volvo","Duston"];
+document.getElementById(h).innerHTML = cars;
+
+car.sort();
+
+document.getElementById(JSON).innerHTML=car;
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+  /*
+  var  fruits, len, text,i;
+  fruits = ["Apple","Banana","Chiku","Mango"];
+  len =fruits.length;
+  text = "<ul>";
+
+  for (i = 0; i < len; i++)
+  {
+    text += "<li>" + fruits[i] + "<li>";
+    }
+      text += "<ul>";
+document.getElementById("hhh").innerHTML=text;
+*/
+  /*
+  var Name  =
+    '{"Person":' +
+    '['+
+      '{"Fname":"shyam","Lname":"Chauhan"},'+
+      '{"Fname":"Ramesh","Lname":"Vahora"},'+
+      '{"Fname":"Deepak","Lname":"Rathod"}]}';
+
+    obj =JSON.parse(Name);
+  document.getElementById("JSON").innerHTML= obj.Person[1].Fname +" "+ obj.Person[1].Lname;
+*/
+/*
+  var number1 =[10,20,30,40];
+  var number2 = number1.map(lastfunction);
+
+  document.getElementById("me").innerHTML=number2;
+
+  function lastfunction(value, index, array) {
+    return value * 2;
+  }
+
+
+
+
+var fruits = ["Apple","Banana","Chiku"]
+var b = fruits.lastIndexOf("Apple");
+
+document.getElementById("ooo").innerHTML=b +1;
+
+
+document.getElementById("press").innerHTML=Date.now()
+
+
+var person ={Fname:"shyam",
+             Lname:"chauhan",
+            get FullName () {
+              return person.Fname +" "+  person.Lname
+                            }
+};
+document.getElementById("me").innerHTML=person.FullName;
+
+*/
+/*
+Var FullName = { Fname:"raj",Lname:"shah", Age: 54, get last()
+                    {
+                      return this.Fname +" "+ this.Lname +" "+ this.Age;
+                    }
+  };
+document.getElementById("f").innerHTML = FullName.last;
+
+
+*/
+/*
+var str ="How Are You";
+
+document.getElementById("me").innerHTML = str.charAt(2);
+
+const a = (x,y) => x * y;
+document.getElementById("d").innerHTML=a(4,7);
+
+function ppp(a , b = 10) {
+
+return a * b;
+}
+
+document.getElementById("f").innerHTML=ppp(5);
+
+
+
+var rose =[1,2,3,4,5];
+var go =rose.find(popp);
+
+function popp(value,index,array) {
+  
+return value > 2  ;
+}
+document.getElementById("press").innerHTML=go
+
+
+document.getElementById("ooo").innerHTML=Number.isInteger(10) +" <br> "+ Number.isInteger(10.5);
+*/
+
+
+
+
+
+
+/*
+
+  var txt = "";
+  var numbers = [10,20,50,10,40,60];
+
+  numbers.forEach(final);
+  document.getElementById("me").innerHTML = txt;
+
+  function final(value){
+  test = test + value + "<br>";
+}
+*/
+
+
+/*
+/*
+
+    function fn()
+  {
+    var str,a;
+
+    str = document.getElementById("press");
+    str.innerHTML="";
+
+      a =document.getElementById("ide").value;
+      try {
+        if(a =="") throw "Blank Value NOt Allow";
+        if (isNaN(a)) throw "Allow only Numbers";
+          a = Number(a);
+        if (a < 10) throw "Is Less the 10";
+        if(a > 20) throw "Please Enter less than 20";
+          }
+      catch (err)
+        {
+        str.innerHTML= "Input is " +  err ;
+        }
+  }
+
+
+
+kd();
+
+var child ="kamlesh";
+
+    function kd()
+  {
+  var child ="ramesh";
+   document.getElementById("ooo").innerHTML="GOOD"+" "+"PERSON"+" " + child;
+  }
+
+document.getElementById("ttt").innerHTML= child;
+
+
+var ram = "scope variables"
+
+      document.getElementById("a").innerHTML="This is the name" +" "+ window.ram;
+
+
+
+a=5;
+elem =document.getElementById("a");
+elem.innerHTML=a;
+var a;
+
+
+
+var person = { Fname:"shyam",
+               Lname:"chauhan",
+               Age:31,
+               Fullname: function ()
+                                {
+                                  return this.Fname +" "+ this.Lname;
+                                }
+
+              }
+document.getElementById("a").innerHTML=person.Fullname();
+
+
+  function myfunction()
+  {
+   var message, x;
+
+   message =document.getElementById("lll");
+   message.innerHTML="";
+   x = document.getElementById("one").value;
+   try
+   {
+
+     if (x =="") throw "Empty";
+     if (isNaN(x)) throw  "not a number";
+     x = Number(x);
+     if (x < 5) throw "not less than 5";
+     if (x > 10) throw "not Greater than 10";
+   }
+   catch (err) {
+     message.innerHTML = "Input is " + err;
+   }
+  }
+*/
+/*
+var person1=
+  {
+  FullName:function () {
+      return this.fname +" "+ this.lname;
+  }
+}
+var person2={fname:"shyam",lname:"chauhan"}
+var x = person1.FullName.call(person2);
+document.getElementById("a").innerHTML=x;
+
+
+
+
+
+var first={ Name:function () {
+return this.nm +" "+ this.age;
+  }
+}
+var second ={nm:"raj",age:30
+var ab = first.Name.call(second);
+document.getElementById("a").innerHTML=ab
+}
+*/
+
+/*
+var hello;
+hello =function () {
+ return"Hello Good Morning"
+}
+document.getElementById("a").innerHTML=hello();
+
+var my;
+my = () => {
+  return "Hello"
+}
+document.getElementById("press").innerHTML=my();
+
+
+var demo;
+demo = () => "FIND"
+document.getElementById("ooo").innerHTML=demo();
+
+
+var ram;
+ram =(ggg) => "HEllo" +" "+ ggg;
+document.getElementById("ttt").innerHTML=ram("health good");
+
+var ee;
+ee = val => "statement"+ val;
+document.getElementById("a").innerHTML=("Blank");
+*/
+/*
+var first ;
+first =function(){
+  document.getElementById("a").innerHTML += this;
+
+  window.addEventListener("load",first);
+  document.getElementById("btn").addEventListener("click", first)
+*/
+/*
+class Car
+{
+  constructor(brand)
+  {
+     this.carname = brand;
+  }
+  present ()
+  {
+  return" I HAve" + this.carname;
+  }
+}
+mycar =new Car ("Ford");
+document.getElementById("ooo").innerHTML = mycar.present();
+
+
+
+
+class Bike
+{
+  constructor(brand)
+  {
+    this.bikename = Honda;
+  }
+  fff ()
+  {
+  return" I Have  " + this.bikename;
+  }
+}
+mybike =new Bike ("HONDA");
+document.getElementById("ttt").innerHTML=mybike.fff();
+
+/*
+  function replicate()
+{
+  var s = document.getElementById("replace").innerHTML;
+  var t =s.replace("Microsoft!", "LAST")
+  document.getElementById("replace").innerHTML=t
+}
+
+
+
+
+
+
+function match()
+{
+  var str = "Please Visit Microsoft";
+  var b = /visit/i ;
+  var result =str.match(b);
+  document.getElementById("sd").innerHTML=result
+}
+
+*/
+
+
+
+ /* var a,b ,c;
+  a=10;
+  b=15;
+  c=a+b;
+
+  document.getElementById("gs").innerHTML=c;
+
+  var pic1="om";
+  var pic2;="prakash";
+  var total=pic1 +" "+pic2;
+
+  document.getElementById("ME").innerHTML=total;
+
+function fnt  (r,t) {
+  return  r * t;
+}
+document.getElementById("gs").innerHTML = fnt(10,15);
+
+var car = { name:"ford",
+              colour:"white",
+            model:"300" };
+
+document.getElementById("a").innerHTML = car.colour;
+
+
+var txt="this is the statements";
+document.getElementById("gs").innerHTML=txt.length;
+
+var z=100;
+
+document.getElementById("ram").innerHTML=z.toString()
+
+
+  var colours =["red","green","blue"];
+document.getElementById("a").innerHTML=colours.join("*");
+
+
+ document.getElementById("b").innerHTML = fruits.pop();
+
+function fnt() {
+  fruits.sort();
+}
+
+document.getElementById("ram").innerHTML=fruits;
+
+
+
+ function fnr() {
+fruits.push("mango")
+}
+
+document.getElementById("a").innerHTML=fnr();
+
+ var fruits = ["orange","banana","kivi","apple","pie"];
+document.getElementById("a").innerHTML=fruits;
+
+
+function fnt() {
+fruits.sort();
+  }
+document.getElementById("b").innerHTML = fruits;
+
+  var txt ="";
+  var number =[10,20,30,40,50];
+
+  number.forEach(myfunction);
+
+  document.getElementById("a").innerHTML=txt;
+
+  function myfunction(value,index,array) {
+  txt=txt+value+"<br>";
+}
+
+var number1 =[10,20,30,40,50,60];
+var number2 =number1.map(fnn);
+
+document.getElementById("a").innerHTML=number2;
+
+function fnn(value,index,array) {
+return value * 2
+}
+var number1 =[10,20,30]
+var number2 = number1.filter(fnn);
+
+document.getElementById("a").innerHTML=number2;
+
+function fnn(value, index ,array) {
+ return value >10;
+}
+var b =new Date();
+document.getElementById("a").innerHTML=b;
+
+
+var d = new Date("2019-11-05")
+
+  document.getElementById("a").innerHTML=d;
+
+
+var b =new Date();
+document.getElementById("a").innerHTML=b.getMonth() +1;
+ var f = new Date();
+ var months =["jan","feb","Mar","Apr","May","Jun","jul","Aug","sept","oct","nov","Dec"];
+
+ document.getElementById("a").innerHTML=months[f.getMonth()];
+
+var t =new Date();
+t.setFullYear(2020);
+document.getElementById("a").innerHTML=t
+var today ,someday, text;
+today =new Date();
+someday= new Date();
+someday.setFullYear(2100,0,14);
+
+if (someday > today)
+{
+  text="Today is before January 14, 2100."
+}
+else
+{
+  text="Today is before January 14, 2100."
+}
+document.getElementById("a").innerHTML=text;
+document.getElementById("a").innerHTML=Math.round(4.4);
+
+ document.getElementById("a").innerHTML=Math.min(0,120,100,50,-60,-20);
+document.getElementById("gs").innerHTML=Math.random();
+document.getElementById("a").innerHTML=Math.floor(Math.random()*10)
+  document.getElementById("b").innerHTML=Math.floor(Math.random() * 100 +1
+
+
+    function fm() {
+document.getElementById("a").innerHTML=Boolean(10>9);
+    }
+function ln() {
+var y=0;
+document.getElementById("a").innerHTML=y
+}
+if (new Date().getHours() < 18))
+ {
+  document.getElementById("b").innerHTML="GOOD DAY"
+ }
+function dat() {
+  var hour = new Date().getHours();
+  var give;
+  if (hour < 18) {
+    give = "GOOD DAY";
+  } else {
+    give = "EVENING";
+  }
+  document.getElementById("a").innerHTML=give;
+}
+
+ function first() {
+
+   var greeting;
+   var time = new Date().getHours();
+
+   if(time <10){
+     greeting="Morning";
+   }else if(time <20){
+  greeting="Evening";
+   }else{
+     greeting="night";
+
+   }
+document.getElementById("a").innerHTML=greeting;
+
+ }
+
+var day;
+ var text;
+  switch (new Date().getDay()) {
+    case 0:
+      day="SUN";
+      break;
+    case 1:
+      day="MON";
+      break;
+    case 2:
+      day="TUE";
+      break;
+    case 3:
+      day="WED";
+      break;
+    case 4:
+      day="THU";
+      break;
+    case 5:
+      day="FRI";
+      break;
+    case 6:
+      day="SAT";
+      break;
+    default
+      text="NONE"
+  }
+document.getElementById("a").innerHTML="Today is" +  day;
+
+
+ var cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi" ];
+ var i, len , text;
+
+ for (i=0,len=cars.length, text=""  ;i < len;  i++)
+ {
+   text += cars [i] + "<br>"
+ }
+
+ document.getElementById("gs").innerHTML=text;
+ var cars = ['BMW', 'Volvo', 'Mini'];
+ var x;
+
+ for (x of cars) {
+   document.write(x + "<br >");
+
+   var n = "text";
+     var  m;
+
+     for (m of n ){
+       document.write(m +"<br>")
+     }
+ }
+  */
+
+/*
+  var fruits =["orange","mango","banana"];
+
+  document.getElementById("a").innerHTML=fruits.pop();
+   document.getElementById("a").innerHTML=fruits;
+
+ function first() {
+  fruits.push("Apple");
+   document.getElementById("a").innerHTML=fruits;
+ }
+
+  function add() {
+fruits.unshift("CHIKU");
+document.getElementById("a").innerHTML=fruits
+}
+
+document.getElementById("a").innerHTML=fruits[0]
+
+}
+*/
+
+/*
+ var fruits =["orange","mango","banana"]
+
+ document.getElementById("a").innerHTML=fruits;
+
+ function shorting()
+ {
+ fruits.push("Apple")
+   fruits.pop()
+  fruits.sort()
+  document.getElementById("a").innerHTML=fruits;
+}
+
+
+var t = new Date();
+ document.getElementById("b").innerHTML=t.getFullYear();
+ var set =new Date();
+ set.setDate(set.getDate() + 1 )
+
+ document.getElementById("gs").innerHTML=set;
+
+function fnn() {
+var h;
+var g =new Date().getHours();
+
+if (g < 10){
+  h="Good Morning"
+}else if (g < 20){
+  h="Good Afternoon"
+  }
+  else
+{
+  h="Night"
+}
+document.getElementById("a").innerHTML=h;
+
+}
+
+var text ="";
+var i;
+
+for (i=0;i<5;i++){
+  text += i + "<br>";
+
+}
+document.getElementById("a").innerHTML=text;
+
+var cars = ["bmw","volvo","saab","maruti"];
+var i,len,text;
+
+for (i = 0,len = cars.length, text=""; i < len; i++ ){
+    text +=   cars[i] + "<br>";
+ }
+document.getElementById("a").innerHTML=text;
+
+
+var car =["maruti","volvo","saab","bmw"];
+var i =2;
+var len =car.length;
+var text="";
+
+for (;i<len;i++) {
+  text += car[i] +"<br>"
+}
+document.getElementById("a").innerHTML=text;
+*/
+
+
+/*
+
+var txt = "";
+var person = {fname:"shyam",lname:"singh",Age:30 };
+var x ;
+
+for(x in person){
+  txt += person[x] + " "
+}
+document.getElementById("a").innerText=txt;
+
+
+
+
+var  cars = ["bmw","maruti","saab","volvo"];
+var x;
+
+for (x of cars)
+{
+  document.write(x+"<br>")
+}
+var txt ="";
+var i=0;
+
+while (i < 10)
+{
+  txt += "<br>" + i;
+  i++;
+}
+document.getElementById("a").innerHTML=txt;
+*/
+
+/*
+var txt ="";
+var x=0;
+
+do {
+  txt +=  x; x++;
+}
+while (x < 10);
+ document.getElementById("a").innerHTML=txt;
+ */
+/*
+var cars =["bmw","maruti","ford","dustan"];
+var x=0;
+var text = "";
+
+for (; cars [x];)
+{
+  text += cars[x] +   "<br>";x++;
+}
+document.getElementById("a").innerHTML=text;
+*/
+
+
+/*
+var text ="";
+var i;
+
+for (i=0; i<10 ; i++){
+  if (i===3){
+    break;
+  }
+text += i ;
+}
+document.getElementById("a").innerHTML=text
+*/
+
+/*var str =" this is the statement"
+var i =str.search("statement");
+document.getElementById("a").innerHTML=i;
+
+var b =str.search("the");
+document.getElementById("a").innerHTML=b;
+
+
+
+
+function fd()
+{
+var str =document.getElementById("demo").innerHTML;
+var txt =str.replace("Microsoft","w")
+document.getElementById("demo").innerHTML=txt;
+}
+
+var str ="all the days are not same"
+var data = str.search("same");
+document.getElementById("a").innerHTML=data;
+
+*/
+
+
+
+</script>
 </body>
 </html>
