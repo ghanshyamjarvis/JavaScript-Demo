@@ -11,11 +11,38 @@
 <p id="n"></p>
 
 <script>
-  document.getElementById("btn").addEventListener("click", displaydate);
-  
+
+  var x= document.getElementById("btn");
+
+  x.addEventListener("mouseover", g1);
+  x.addEventListener("click", g2);
+  x.addEventListener("mouseout",g3);
+
+  function g1()
+  {
+  document.getElementById("n").innerText += "MouseOver"
+  }
+  function g2()
+  {
+  document.getElementById("n").innerHTML += "CLICK"
+  }
+  function g3()
+  {
+  document.getElementById("n").innerHTML += "MouseOut"
+  }
+
+
+/*
+  document.getElementById("btn").addEventListener("click", function() { alert ("sss")});
+*/
+
+
+  /*
   function displaydate() {
 document.getElementById("n").innerHTML=Date();
   }
+
+   */
 </script>
 </body>
 </html>

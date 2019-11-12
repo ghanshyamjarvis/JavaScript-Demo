@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<button id="mybtn">Click</button>
+<p id="demo"></p>
+
+<script>
+
+var p1 =10;
+var p2 = 20;
+
+document.getElementById("mybtn").addEventListener("click",function()
+{myfunction ( p1 , p2 ) });
+
+  function myfunction(a,b){
+  var x= a * b ;
+  document.getElementById("demo").innerHTML= x;
+  }
+
+  
+</script>
+</body>
+</html>
