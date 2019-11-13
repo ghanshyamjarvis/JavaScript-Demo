@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <p>Hello</p>
+  <p> Good</p>
+<button onclick="myfunction()"> TRY </button>
+
+</head>
+<body>
+<script>
+
+  function myfunction() {
+var collection =document.getElementsByTagName("p");
+var i;
+
+for (i=0;i < collection.length; i++){
+  collection[i].style.color="blue";
+}
+
+}
+</script>
+</body>
+</html>
