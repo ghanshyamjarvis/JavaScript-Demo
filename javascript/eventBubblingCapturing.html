@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+
+  <style> #myDiv1,#myDiv2
+  {
+  background: blue;
+    padding: 50px;
+  }
+#p1,#p2
+{
+  background: aquamarine;
+  padding: 20px;
+}
+  </style>
+</head>
+<body>
+
+
+<div id="myDiv1">
+  <h2>Bubbling</h2>
+  <p id="p1"></p>
+</div>
+
+<div id="myDiv2">
+  <h2>Capturing</h2>
+  <p id="p2"></p>
+</div>
+
+<script>
+document.getElementById("p1").addEventListener("click", function() { alert ("You clicked the blue element");},false);
+document.getElementById("myDiv1").addEventListener("click", function() { alert ("You clicked the blue element");},false);
+document.getElementById("p2").addEventListener("click", function() { alert ("You clicked the blue element");},false);
+document.getElementById("myDiv2").addEventListener("click", function() { alert ("You clicked the blue element");},false);
+</script>
+
+</body>
+</html>
