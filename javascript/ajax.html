@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+
+  <p id="demo">second demo</p>
+  <button onclick="fun()"> Try it</button>
+
+</head>
+<body>
+<script>
+  function fun()
+  {
+  var first= new XMLHttpRequest();
+  first.onreadystatechange=function ()
+    {
+    if (this.readyState === 4 && this.status === 200)
+      {
+        document.getElementById("demo").innerHTML=this.responseText;
+      }
+    };
+  first.open("GET","onload.html",true);
+  first.send();
+
+  }
+
+</script>
+</body>
+</html>

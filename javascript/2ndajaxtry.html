@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+
+  <p id="demod">GOod</p>
+  <button onclick="demo()"> function ajax</button>
+</head>
+
+<body>
+<script>
+  function demo() {
+    var ggg =XMLHttpRequest();
+    ggg.onreadystatechange = function () {
+     if (this.readyState === 4 && this.status === 200){
+       document.getElementById("demod").innerHTML=this.responseText;
+     }
+    };
+    ggg.open("GET","onclickmouse.html",true);
+    ggg.send();
+
+  }
+</script>
+</body>
+</html>
