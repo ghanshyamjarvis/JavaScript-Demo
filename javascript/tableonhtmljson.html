@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <p id="demo"></p>
+  <button onclick="myfunction()"> Button </button>
+
+</head>
+<body>
+<script>
+
+  var obj,dbparma,xmlhttp,myobj,x, txt ="";
+
+  dbparma =JSON.stringify(obj);
+
+  xmlhttp =new XMLHttpRequest();
+
+  xmlhttp.onreadystatechange = function () 
+  {
+  if (this.readyState === 4 && this.status === 200);
+    { myobj = JSON.parse(this.responseText);
+    txt += "<table border ='1'>"
+    
+    for (x in myobj){
+        txt += "<tr><td> + myobj[X].name + "</tr></td>";
+    }
+    txt =+ "</table>"
+      document.getElementById("demo").innerHTML =txt;
+    }
+  };
+  xmlhttp.open("GET","json_demo_db_post.php",true)
+  xmlhttp.setRequestHeader()
+  xmlhttp.send()
+
+</script>
+
+</body>
+</html>

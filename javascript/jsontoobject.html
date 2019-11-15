@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+
+  <p id="demo"></p>
+</head>
+<body>
+<script>
+
+  var myjson = '{"Name":"shyam","Age":50,"Nationality":"Indian"}';
+
+  var obj =JSON.parse(myjson);
+
+  document.getElementById("demo").innerHTML=obj.Name +" "+ obj.Age;
+
+  </script>
+
+</body>
+</html>
