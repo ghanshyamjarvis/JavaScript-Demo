@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+<style >
+
+  .tab input{display: block}
+.tab input{display: block }
+</style>
+
+</head>
+<body>
+
+<div class="tab">
+    First Name : <input type="text" id="fn"><br>
+    Last Name: <input type="text" id="ln"><br>
+    Age: <input type="text" id="ag"><br>
+    <button onclick="addrow()">Add</button>
+    <button onclick="edithtmlttableselecterow()">Edit</button>
+    <button onclick="removeselectedrow()">Remove</button>
+  </div>
+
+<hr color="blue" >
+
+<table class="tab1" border="5px" id="table">
+  <tr>
+    <td>First Name</td>
+    <td>Last Name</td>
+    <td>Age Name</td>
+  </tr>
+  <tr>
+    <td>A3</td>
+    <td>B3</td>
+    <td>30</td>
+  </tr>
+
+  <tr>
+    <td>A2</td>
+    <td>B2</td>
+    <td>20</td>
+  </tr>
+</table>
+
+<script>
+
+  var rIndex,
+    table = document.getElementById("table");
+
+  //ADD ROW
+
+  function addrow()
+  {
+    //get table by id
+    //create new row and cell
+    //get value from  input text
+    //set value into row  cells
+  var newRow =table.insertRow(table.length);
+      cell1 =newRow.insertCell(0),
+      cell2 =newRow.insertCell(1),
+      cell3 =newRow.insertCell(2),
+      fname =document.getElementById("fn").value,
+      lname=document.getElementById("ln").value,
+      age =document.getElementById("ag").value;
+
+      cell1.innerHTML = fname;
+      cell2.innerHTML =lname;
+      cell3.innerHTML =age;
+
+
+      // call the function to set the event to the new row
+    selectedrowtoinput();
+  }
+  function selectedrowtoinput()
+  {
+
+    for (var i= 1; i < table.rows.length; i++)
+    {
+      table.rows[i].onclick =function ()
+      {
+        //get selected row index
+       rIndex =this.rowIndex;
+          document.getElementById("fn").value =this.cells[0].innerHTML;
+        document.getElementById("ln").value =this.cells[1].innerHTML;
+        document.getElementById("ag").value =this.cells[2].innerHTML;
+      };
+    }
+  }
+  function edithtmlttableselecterow()
+  {
+    var fname = document.getElementById("fn").value,
+      lname = document.getElementById("ln").value,
+      age = document.getElementById("ag").value;
+    table.rows[rIndex].cells[0].innerHTML=fname;
+    table.rows[rIndex].cells[1].innerHTML=lname;
+    table.rows[rIndex].cells[2].innerHTML=age;
+
+    table.rows[rIndex].cells[0].innerHTML="";
+  }
+  function removeselectedrow()
+  {
+      table.deleteRow(rIndex)
+      //clear input text
+    document.getElementById("fname").value ="";
+    document.getElementById("lname").value ="";
+    document.getElementById("age").value ="";
+  }
+  // https://www.youtube.com/watch?v=KnKMGCSPj3Y
+</script>
+
+</body>
+</html>
