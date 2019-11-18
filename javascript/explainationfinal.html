@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+
+<p id="demo"></p>
+<p id="demo1"></p>
+  <p id="demo21"></p>
+
+</head>
+<body>
+<button onclick="fn()"> click </button>
+<button onclick="addfirst()"> Addit </button>
+<button onclick="myfunction()">first</button>
+<script>
+/*
+  var fruits =  ["apple","Mangoes","Banana","Orange"];
+
+  document.getElementById("demo").innerHTML=fruits;
+function fn()
+{
+fruits[fruits.length]="LEmon";
+document.getElementById("demo").innerHTML=fruits;
+}
+
+ */
+/*
+//Loop through For
+var txt,i,flen;
+
+var Days = ["sunday","Monday","Tuesday"];
+var flen= Days.length;
+var txt ="<ul>"
+for (i=0 ; i< flen ; i++)
+{
+txt +="<li>" + Days[i] + "</li>";
+}
+txt += "</ul>";
+
+document.getElementById("demo").innerHTML =txt;
+*/
+/*
+var Name= ["shyam","raj","kavita","ramesh"];
+document.getElementById("demo").innerHTML=Name;
+
+function addfirst() {
+  Name.push("dimple");
+  document.getElementById("demo").innerHTML=Name;
+}
+*/
+
+/*
+var name = ["shyam","raj","ramesh","vishal"];
+document.getElementById("demo1").innerHTML=name;
+name.pop();
+document.getElementById("demo21").innerHTML=name;
+*/
+/*
+var cars = [
+  {type:"Volvo", year:2016},
+  {type:"Saab", year:2001},
+  {type:"BMW", year:2010}
+];
+
+displayCars();
+function myfunction()
+{
+cars.sort(function (a,b)
+        {return a.year - b.year});
+displayCars();
+}
+
+function displayCars()
+{
+document.getElementById("demo").innerHTML=
+  cars[0].type +" " + cars[0].year + "<br>" +
+  cars[1].type + " " + cars[1].year + "<br>" +
+  cars[2].type + " " + cars[2].year;
+}
+*/
+
+/*
+var txt ="";
+var number = [10,20,30,40,5,3,4];
+number.forEach(fn1);
+  document.getElementById("demo").innerHTML=txt;
+
+function fn1(value,index,array)
+{
+  txt =txt + value +"<br>"
+}
+*/
+/*
+var number = [10, 20, 30];
+var number1 =number.map(my);
+document.getElementById("demo").innerHTML=number1;
+
+function my(value,index,array)
+{
+return value *2
+}
+*/
+
+var text="";
+var i;
+
+for (i=0; i<10;i++){
+  if (i===3){continue};
+  text += "The NUmber Is" + i + "<br>";
+}
+document.getElementById("demo").innerHTML=text; 
+
+</script>
+</body>
+</html>
