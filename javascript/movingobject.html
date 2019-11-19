@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Moving Object Using Key</title>
+  <style>
+
+  #c
+  {
+  border: 2px solid black;
+  }
+  </style>
+
+</head>
+
+<body bgcolor="#90ee90">
+
+<canvas width="1825" height="900" id="c" tabindex="1">
+</canvas>
+
+
+<script>
+
+  window.onload = function ()
+  {
+    var canvas = document.getElementById("c");
+
+    canvas.addEventListener('keydown', moveit, true);
+    ctx = canvas.getContext("2d");
+    ctx.fillRect(100, 100, 30, 30);
+    var x = 100;
+    var y = 100;
+
+    function moveit(e)
+    {
+
+      if (e.keyCode == 38)
+      {
+        ctx.clearRect (0, 0, canvas.width, canvas.height);
+        y = y - 10;
+        ctx.fillRect(x, y, 30, 30);
+      }
+
+      if (e.keyCode == 40)
+      {
+        ctx.clearRect(0, 0,canvas.width, canvas.height);
+        y = y + 10;
+        ctx.fillRect(x, y, 30, 30);
+      }
+      if (e.keyCode == 37)
+      {
+        ctx.clearRect(0, 0,canvas.width, canvas.height);
+        x = x - 10;
+        ctx.fillRect(x, y, 30, 30);
+      }
+      if (e.keyCode == 39)
+      {
+        ctx.clearRect(0, 0,canvas.width, canvas.height);
+        x = x + 10;
+        ctx.fillRect(x, y, 30, 30);
+      }
+    }
+  }
+</script>
+</body>
+</html>
