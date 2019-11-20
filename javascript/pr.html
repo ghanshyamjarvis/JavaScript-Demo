@@ -1,0 +1,51 @@
+<HTML>
+<HEAD>
+  <TITLE>Cursor Mover</TITLE>
+  <SCRIPT>
+    function move(e)
+    {
+      if(window.event) // IE
+      {
+        ek = window.event.keyCode;
+
+        if (ek==37)
+          document.getElementById('DIV1').style.left = (document.getElementById('DIV1').style.left - 5);
+        if (ek==39)
+          document.getElementById('DIV1').style.left = (document.getElementById('DIV1').style.left + 5);
+        if (ek==38)
+          document.getElementById('DIV1').style.top = (document.getElementById('DIV1').style.left - 5);
+        if (ek==40)
+          document.getElementById('DIV1').style.top = (document.getElementById('DIV1').style.top + 5);
+      }
+      else // Other browsers
+      {
+        ek = e.which
+
+        if (ek==37)
+          document.getElementById('DIV1').style.left = (document.getElementById('DIV1').style.left - 5);
+        if (ek==39)
+          document.getElementById('DIV1').style.left = (document.getElementById('DIV1').style.left + 5);
+        if (ek==38)
+          document.getElementById('DIV1').style.top = (document.getElementById('DIV1').style.left - 5);
+        if (ek==40)
+          document.getElementById('DIV1').style.top = (document.getElementById('DIV1').style.top + 5);
+
+      }
+    }
+  </SCRIPT>
+  <STYLE TYPE="TEXT/css">
+    #DIV1
+    {
+      position: absolute;
+      background-color:#000000;
+      height:20;
+      width:20;
+      top:100px;
+      left:100px;
+    }
+  </style>
+</HEAD>
+<BODY onkeydown="move(event);">
+<div id="DIV1" style=""></DIV>
+</BODY>
+</HTML>
